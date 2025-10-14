@@ -58,7 +58,7 @@ const Header = ({ auth }) => {
           <div className="hidden md:flex items-center space-x-4">
             {auth?.user?.is_admin && (
               <a
-                href="/admin/dashboard"
+                href="/admin"
                 className="bg-gray-600 hover:bg-gray-700 text-white px-3 py-2 rounded-lg shadow-clinic-md transition-clinic text-sm lg:text-base"
               >
                 Admin Dashboard
@@ -111,7 +111,7 @@ const Header = ({ auth }) => {
             </button>
             {auth?.user?.is_admin && (
               <a
-                href="/admin/dashboard"
+                href="/admin"
                 className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"
               >
                 Admin Dashboard

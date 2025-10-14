@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 
 // Admin routes
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::patch('/submissions/{submission}/status', [AdminController::class, 'updateStatus'])->name('submissions.update-status');
 });
 
