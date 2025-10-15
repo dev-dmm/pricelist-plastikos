@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('phone');
             $table->text('notes')->nullable();
             $table->string('category');
             $table->string('procedure');
-            $table->string('variant')->nullable();
-            $table->string('status')->default('pending'); // pending, contacted, completed
+            $table->json('pricing_details')->nullable();
+            $table->json('total_price')->nullable();
+            $table->enum('status', ['pending', 'contacted', 'completed'])->default('pending');
             $table->timestamps();
         });
     }

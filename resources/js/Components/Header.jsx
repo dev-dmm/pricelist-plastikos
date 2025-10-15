@@ -34,12 +34,12 @@ const Header = ({ auth }) => {
             >
               Αρχική
             </button>
-            <button
-              onClick={() => scrollToSection("procedures")}
+            <a
+              href="/pricelist"
               className="text-foreground hover:text-primary transition-clinic font-medium text-sm lg:text-base"
             >
-              Επεμβάσεις
-            </button>
+              Τιμοκατάλογος
+            </a>
             <button
               onClick={() => scrollToSection("testimonials")}
               className="text-foreground hover:text-primary transition-clinic font-medium text-sm lg:text-base"
@@ -91,12 +91,12 @@ const Header = ({ auth }) => {
             >
               Αρχική
             </button>
-            <button
-              onClick={() => scrollToSection("procedures")}
+            <a
+              href="/pricelist"
               className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"
             >
-              Επεμβάσεις
-            </button>
+              Τιμοκατάλογος
+            </a>
             <button
               onClick={() => scrollToSection("testimonials")}
               className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"

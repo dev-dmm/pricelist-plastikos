@@ -13,32 +13,33 @@ class Submission extends Model
         'notes',
         'category',
         'procedure',
-        'variant',
+        'pricing_details',
+        'total_price',
         'status',
+        'email_sent_at',
+        'email_scheduled_for'
     ];
 
     protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
+        'pricing_details' => 'array',
+        'total_price' => 'array',
+        'email_sent_at' => 'datetime',
+        'email_scheduled_for' => 'datetime'
     ];
 
-    public function getStatusBadgeAttribute()
+    /**
+     * Boot method to set random email schedule on creation
+     */
+    protected static function boot()
     {
-        return match($this->status) {
-            'pending' => 'bg-yellow-100 text-yellow-800',
-            'contacted' => 'bg-blue-100 text-blue-800',
-            'completed' => 'bg-green-100 text-green-800',
-            default => 'bg-gray-100 text-gray-800',
-        };
-    }
+        parent::boot();
 
-    public function getStatusLabelAttribute()
-    {
-        return match($this->status) {
-            'pending' => 'Pending',
-            'contacted' => 'Contacted',
-            'completed' => 'Completed',
-            default => 'Unknown',
-        };
+        static::creating(function ($submission) {
+            if ($submission->email && !$submission->email_scheduled_for) {
+                // Random time between 1-2 hours from now
+                $randomMinutes = rand(60, 120); // 60-120 minutes = 1-2 hours
+                $submission->email_scheduled_for = now()->addMinutes($randomMinutes);
+            }
+        });
     }
 }
