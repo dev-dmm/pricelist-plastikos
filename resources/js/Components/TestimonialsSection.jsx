@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Why Choose Us Grid */}
-        <div className="max-w-7xl mx-auto">
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             {whyChooseUs.map((item, index) => (
               <div key={item.title} className="group relative overflow-hidden rounded-2xl shadow-clinic-lg hover:shadow-clinic-lg transition-clinic-slow">

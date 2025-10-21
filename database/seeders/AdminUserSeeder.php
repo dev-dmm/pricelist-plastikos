@@ -16,7 +16,7 @@ class AdminUserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@kliniki-aisthitikis.gr',
+            'email' => 'info@surgeryquote.gr',
             'password' => Hash::make('admin123'),
             'is_admin' => true,
             'email_verified_at' => now(),

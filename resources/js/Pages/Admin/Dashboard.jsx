@@ -17,7 +17,7 @@ export default function Dashboard({ auth, submissions, stats }) {
             <Head title="Διαχείριση" />
 
             <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div className="sm:px-6 lg:px-8">
                     {/* Stats Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                         <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">

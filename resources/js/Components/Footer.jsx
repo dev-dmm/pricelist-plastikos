@@ -1,10 +1,10 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Mail, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Clinic Info */}
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center space-x-2">
@@ -65,35 +65,17 @@ const Footer = () => {
           <div className="space-y-3 sm:space-y-4">
             <h4 className="font-serif text-base sm:text-lg font-semibold text-foreground">Επικοινωνία</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm text-muted-foreground">
-                  Λεωφόρος Βασιλίσσης Σοφίας 123
-                  <br />
-                  Αθήνα, 106 74
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                <span className="text-xs sm:text-sm text-muted-foreground">+30 210 123 4567</span>
-              </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                <span className="text-xs sm:text-sm text-muted-foreground">info@kliniki-aisthitikis.gr</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">info@surgeryquote.gr</span>
               </li>
             </ul>
-          </div>
-
-          {/* Hours */}
-          <div className="space-y-3 sm:space-y-4">
             <h4 className="font-serif text-base sm:text-lg font-semibold text-foreground">Ώρες Λειτουργίας</h4>
             <ul className="space-y-2">
               <li className="flex items-start space-x-3">
                 <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-xs sm:text-sm text-muted-foreground">
-                  <p>Δευ - Παρα: 9:00 - 18:00</p>
-                  <p>Σάββατο: 10:00 - 16:00</p>
-                  <p>Κυριακή: Κλειστά</p>
+                  <p>24/7</p>
                 </div>
               </li>
             </ul>

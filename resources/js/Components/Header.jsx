@@ -34,17 +34,17 @@ const Header = ({ auth }) => {
             >
               Αρχική
             </button>
-            <a
-              href="/pricelist"
-              className="text-foreground hover:text-primary transition-clinic font-medium text-sm lg:text-base"
-            >
-              Τιμοκατάλογος
-            </a>
             <button
-              onClick={() => scrollToSection("testimonials")}
+              onClick={() => scrollToSection("procedures")}
               className="text-foreground hover:text-primary transition-clinic font-medium text-sm lg:text-base"
             >
-              Αποτελέσματα
+              Οι Επεμβάσεις μας
+            </button>
+            <button
+              onClick={() => scrollToSection("why-choose-us")}
+              className="text-foreground hover:text-primary transition-clinic font-medium text-sm lg:text-base"
+            >
+              Γιατί να μας επιλέξετε;
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -65,7 +65,7 @@ const Header = ({ auth }) => {
               </a>
             )}
             <button
-              onClick={() => scrollToSection("estimator")}
+              onClick={() => scrollToSection("home")}
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-clinic-md transition-clinic text-sm lg:text-base"
             >
               Κλείστε Συνάντηση
@@ -91,17 +91,17 @@ const Header = ({ auth }) => {
             >
               Αρχική
             </button>
-            <a
-              href="/pricelist"
-              className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"
-            >
-              Τιμοκατάλογος
-            </a>
             <button
-              onClick={() => scrollToSection("testimonials")}
+              onClick={() => scrollToSection("procedures")}
               className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"
             >
-              Αποτελέσματα
+              Οι Επεμβάσεις μας
+            </button>
+            <button
+              onClick={() => scrollToSection("why-choose-us")}
+              className="block w-full text-left text-foreground hover:text-primary transition-clinic font-medium py-3 px-2 rounded-lg hover:bg-accent/50 touch-manipulation"
+            >
+              Γιατί να μας επιλέξετε;
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -118,7 +118,7 @@ const Header = ({ auth }) => {
               </a>
             )}
             <button
-              onClick={() => scrollToSection("estimator")}
+              onClick={() => scrollToSection("home")}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-lg mt-4 touch-manipulation min-h-[48px]"
             >
               Κλείστε Συνάντηση

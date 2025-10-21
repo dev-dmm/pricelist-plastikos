@@ -245,31 +245,9 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden clinic-gradient"
     >
-      {/* Medical Background Video */}
-      <div className="absolute inset-0 w-full h-full">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          onError={(e) => {
-            // Fallback to gradient background if video fails to load
-            e.target.style.display = 'none';
-            e.target.parentElement.style.background = 'linear-gradient(135deg, hsl(180 20% 15%) 0%, hsl(180 30% 25%) 100%)';
-          }}
-        >
-          <source src="/videos/medical-clinic-background.mp4" type="video/mp4" />
-        </video>
-        {/* Fallback gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary/40"></div>
-        {/* Video overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
-      </div>
       <div className="container mx-auto px-4 py-8 sm:py-16 md:py-24 relative z-10">
-        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Hero Content */}
             <div className="space-y-6 sm:space-y-8 animate-fade-in">
@@ -280,18 +258,18 @@ const HeroSection = () => {
               </div>
 
               {/* Headline */}
-              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Επαγγελματική Αισθητική Χειρουργική{" "}
-                <span className="text-primary">με Ασφάλεια & Αποτελεσματικότητα</span>
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                Αισθητικές Επεμβάσεις με{" "}
+                <span className="text-primary">Διαφάνεια & Φροντίδα</span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-                Πιστοποιημένοι χειρουργοί με 15+ χρόνια εμπειρία. Λάβετε εξατομικευμένη εκτίμηση κόστους εντός 2 ωρών.
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Λάβετε εξατομικευμένη ενημέρωση εντός 2 ωρών
               </p>
 
               {/* Trust Indicators */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-white/80">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                   <span>Πιστοποιημένοι Χειρουργοί</span>
@@ -308,7 +286,7 @@ const HeroSection = () => {
             </div>
 
             {/* Right Column - Form Container */}
-            <div className="bg-white/95 backdrop-blur-sm shadow-clinic-lg rounded-xl border border-primary/20">
+            <div className="bg-card/60 backdrop-blur-sm shadow-clinic-lg rounded-xl border border-primary/20">
               <div className="p-4 sm:p-6 md:p-8">
                 {stepIndicator}
 
@@ -495,7 +473,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       {/* Decorative gradient overlay */}

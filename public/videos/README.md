@@ -25,3 +25,4 @@ If no video is provided, the hero section will display a gradient background wit
 
 ## Usage
 The video is automatically loaded in the HeroSection component and will loop continuously with muted audio for a professional medical website appearance.
+

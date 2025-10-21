@@ -107,7 +107,7 @@ const Pricelist = () => {
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <div className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="px-4 sm:px-6 lg:px-8 py-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 Τιμοκατάλογος Επεμβάσεων
@@ -136,7 +136,7 @@ const Pricelist = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="px-4 sm:px-6 lg:px-8 py-8">
           {searchTerm ? (
             /* Search Results */
             <div className="space-y-6">
@@ -256,7 +256,7 @@ const Pricelist = () => {
 
         {/* Footer CTA */}
         <div className="bg-blue-600 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ενδιαφέρεστε για κάποια επέμβαση;
             </h2>
