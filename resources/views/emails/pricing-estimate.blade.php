@@ -183,16 +183,16 @@
                     </p>
                 @endif
 
-                @if($submission->pricing_details)
+                @if($submission->pricing_details && isset($submission->pricing_details['types']))
                     <div class="pricing-table">
-                        @foreach($submission->pricing_details as $item)
+                        @foreach($submission->pricing_details['types'] as $item)
                             <div class="pricing-row">
-                                <span class="pricing-label">{{ $item['name'] }}</span>
+                                <span class="pricing-label">{{ $item['name'] ?? 'Service' }}</span>
                                 <span class="pricing-value">
                                     @if(isset($item['price_to']) && $item['price_to'] != $item['price_from'])
-                                        €{{ number_format($item['price_from'], 2) }} - €{{ number_format($item['price_to'], 2) }}
+                                        €{{ number_format($item['price_from'] ?? 0, 2) }} - €{{ number_format($item['price_to'] ?? 0, 2) }}
                                     @else
-                                        €{{ number_format($item['price_from'], 2) }}
+                                        €{{ number_format($item['price_from'] ?? 0, 2) }}
                                     @endif
                                 </span>
                             </div>
