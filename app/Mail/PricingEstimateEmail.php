@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\Submission;
+use App\Services\OpenAIService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,6 +17,7 @@ class PricingEstimateEmail extends Mailable
 
     public $submission;
     public $doctorPhone = '6946051659';
+    public $generatedContent;
 
     /**
      * Create a new message instance.
@@ -23,6 +25,10 @@ class PricingEstimateEmail extends Mailable
     public function __construct(Submission $submission)
     {
         $this->submission = $submission;
+        
+        // Generate AI content
+        $openAIService = new OpenAIService();
+        $this->generatedContent = $openAIService->generateEmailContent($submission);
     }
 
     /**
@@ -45,6 +51,7 @@ class PricingEstimateEmail extends Mailable
             with: [
                 'submission' => $this->submission,
                 'doctorPhone' => $this->doctorPhone,
+                'generatedContent' => $this->generatedContent,
             ]
         );
     }
