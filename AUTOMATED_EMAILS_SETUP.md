@@ -5,7 +5,7 @@ This system automatically sends personalized pricing estimate emails to users **
 - Personalized greeting with their name
 - The service they inquired about with detailed pricing breakdown
 - Total estimated cost
-- Recommended doctor contact information (Phone: 6946051659)
+- Recommended doctor contact information (Phone: 6980935175)
 - Professional, branded email template
 
 ## How It Works
@@ -159,7 +159,7 @@ Edit `resources/views/emails/pricing-estimate.blade.php` to:
 
 Edit `app/Mail/PricingEstimateEmail.php`:
 ```php
-public $doctorPhone = '6946051659'; // Change this
+public $doctorPhone = '6980935175'; // Change this
 ```
 
 ## Monitoring

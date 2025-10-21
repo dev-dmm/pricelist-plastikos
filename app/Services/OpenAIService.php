@@ -65,7 +65,7 @@ class OpenAIService
         $prompt .= "- A warm greeting\n";
         $prompt .= "- Explanation that you found pricing estimates from recommended surgeons\n";
         $prompt .= "- Mention that these are indicative prices from the surgeons\n";
-        $prompt .= "- Invitation to call for consultation to discuss surgeon options (phone: 6946051659)\n";
+        $prompt .= "- Invitation to call for consultation to discuss surgeon options (phone: 6980935175)\n";
         $prompt .= "- Personal signature from [Your Name] - Medical Consultant\n";
         $prompt .= "- Keep it conversational and human, not corporate\n";
         $prompt .= "- Emphasize that you help them find the best surgeon for their needs\n";
@@ -156,9 +156,9 @@ class OpenAIService
         
         // Vary the call-to-action
         $callToActions = [
-            "Για να προχωρήσουμε και να συζητήσουμε τις επιλογές χειρουργών, μπορείτε να καλέσετε στο 6946051659. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00.",
-            "Για να μάθετε περισσότερα και να συζητήσουμε τις επιλογές σας, καλέστε στο 6946051659. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00.",
-            "Αν θέλετε να προχωρήσουμε, μπορείτε να καλέσετε στο 6946051659 για να συζητήσουμε τις επιλογές χειρουργών. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00."
+            "Για να προχωρήσουμε και να συζητήσουμε τις επιλογές χειρουργών, μπορείτε να καλέσετε στο 6980935175. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00.",
+            "Για να μάθετε περισσότερα και να συζητήσουμε τις επιλογές σας, καλέστε στο 6980935175. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00.",
+            "Αν θέλετε να προχωρήσουμε, μπορείτε να καλέσετε στο 6980935175 για να συζητήσουμε τις επιλογές χειρουργών. Είμαι διαθέσιμος Δευτέρα έως Παρασκευή, 9:00-18:00."
         ];
         
         $content .= $callToActions[array_rand($callToActions)] . "\n\n";

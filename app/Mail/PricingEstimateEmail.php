@@ -16,7 +16,7 @@ class PricingEstimateEmail extends Mailable
     use Queueable, SerializesModels;
 
     public $submission;
-    public $doctorPhone = '6946051659';
+    public $doctorPhone = '6980935175';
     public $generatedContent;
 
     /**
