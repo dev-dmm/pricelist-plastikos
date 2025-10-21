@@ -34,7 +34,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin 3s ease-in-out;
   }
 }
 
@@ -52,55 +52,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clinical minimalist palette */
-    --background: 30 25% 98%;
-    --foreground: 220 15% 20%;
+    /* Medical turquoise palette */
+    --background: 0 0% 100%;
+    --foreground: 180 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 20%;
+    --card-foreground: 180 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 20%;
+    --popover-foreground: 180 15% 20%;
 
-    /* Warm champagne gold for primary actions */
-    --primary: 40 35% 55%;
+    /* Professional turquoise for primary actions */
+    --primary: 180 60% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft beige for secondary elements */
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 220 15% 25%;
+    /* Light turquoise for secondary elements */
+    --secondary: 180 20% 95%;
+    --secondary-foreground: 180 15% 25%;
 
-    /* Light blue muted tones */
-    --muted: 200 30% 94%;
-    --muted-foreground: 220 10% 45%;
+    /* Medical blue-grey muted tones */
+    --muted: 180 15% 96%;
+    --muted-foreground: 180 10% 45%;
 
-    /* Powder blue accent */
-    --accent: 200 40% 88%;
-    --accent-foreground: 220 20% 25%;
+    /* Soft turquoise accent */
+    --accent: 180 30% 90%;
+    --accent-foreground: 180 20% 25%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 40 35% 55%;
+    --border: 180 15% 88%;
+    --input: 180 15% 88%;
+    --ring: 180 60% 45%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
     /* Custom design tokens */
-    --clinical-blue: 200 45% 92%;
-    --warm-beige: 30 20% 95%;
-    --silver: 220 10% 75%;
-    --gold-accent: 40 40% 60%;
+    --medical-turquoise: 180 60% 45%;
+    --medical-light: 180 20% 95%;
+    --medical-dark: 180 30% 25%;
+    --medical-accent: 180 40% 60%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(30 25% 98%) 0%, hsl(200 30% 96%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(30 15% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(180 20% 98%) 0%, hsl(180 30% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 15% 98%) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 4px 16px -2px hsl(220 15% 20% / 0.06);
-    --shadow-medium: 0 8px 24px -4px hsl(220 15% 20% / 0.1);
-    --shadow-strong: 0 12px 32px -6px hsl(220 15% 20% / 0.15);
+    --shadow-soft: 0 4px 16px -2px hsl(180 15% 20% / 0.06);
+    --shadow-medium: 0 8px 24px -4px hsl(180 15% 20% / 0.1);
+    --shadow-strong: 0 12px 32px -6px hsl(180 15% 20% / 0.15);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,33 +124,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 20% 12%;
-    --foreground: 30 15% 95%;
+    --background: 180 20% 8%;
+    --foreground: 180 15% 95%;
 
-    --card: 220 20% 15%;
-    --card-foreground: 30 15% 95%;
+    --card: 180 20% 12%;
+    --card-foreground: 180 15% 95%;
 
-    --popover: 220 20% 15%;
-    --popover-foreground: 30 15% 95%;
+    --popover: 180 20% 12%;
+    --popover-foreground: 180 15% 95%;
 
-    --primary: 40 40% 60%;
-    --primary-foreground: 220 20% 12%;
+    --primary: 180 60% 50%;
+    --primary-foreground: 180 20% 8%;
 
-    --secondary: 220 15% 20%;
-    --secondary-foreground: 30 15% 95%;
+    --secondary: 180 15% 20%;
+    --secondary-foreground: 180 15% 95%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 180 15% 18%;
+    --muted-foreground: 180 10% 60%;
 
-    --accent: 200 30% 25%;
-    --accent-foreground: 30 15% 95%;
+    --accent: 180 30% 25%;
+    --accent-foreground: 180 15% 95%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 30 15% 95%;
+    --destructive-foreground: 180 15% 95%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 40 40% 60%;
+    --border: 180 15% 22%;
+    --input: 180 15% 22%;
+    --ring: 180 60% 50%;
   }
 }
 
@@ -195,5 +195,26 @@ All colors MUST be HSL.
   
   .transition-clinic-slow {
     transition: var(--transition-slow);
+  }
+
+  /* Medical-specific utilities */
+  .medical-card {
+    @apply bg-white rounded-xl shadow-clinic border border-primary/10 hover:shadow-clinic-lg transition-clinic-slow;
+  }
+
+  .medical-button {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-clinic;
+  }
+
+  .medical-section {
+    @apply py-16 sm:py-20 md:py-24;
+  }
+
+  .medical-heading {
+    @apply font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground;
+  }
+
+  .medical-subheading {
+    @apply text-lg sm:text-xl text-muted-foreground leading-relaxed;
   }
 }
